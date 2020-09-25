@@ -12,7 +12,9 @@ public class SnakeLadder3 {
 	public static void main(String[] args) {
 		int newPosition = startPosition;
 		Random r = new Random();
+		int count = 0;
 		while (newPosition != 100) {
+			++count;
 			int diceValue = 1 + r.nextInt(6);
 			int option = r.nextInt(3);
 			switch (option) {
@@ -31,8 +33,8 @@ public class SnakeLadder3 {
 				newPosition += 0;
 				break;
 			}
-			System.out.println("newPos diceVal option");
-			System.out.println(newPosition + "\t" + diceValue + "\t" + option);
+			System.out.println("newPos diceVal option   count");
+			System.out.println(newPosition + "\t" + diceValue + "\t" + option + "\t" + count);
 		}
 	}
 
