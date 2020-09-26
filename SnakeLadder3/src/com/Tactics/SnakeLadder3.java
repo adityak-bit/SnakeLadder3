@@ -7,6 +7,7 @@ public class SnakeLadder3 {
 	public static final int Snake = 2;
 	public static final int NoPlay = 0;
 	public static final int startPosition = 0;
+	public static final int winPosition = 100;
 
 	public static void main(String[] args) {
 		int newPosition = startPosition;
@@ -17,6 +18,8 @@ public class SnakeLadder3 {
 			switch (option) {
 			case Ladder:
 				newPosition += diceValue;
+				if (newPosition > winPosition)
+					newPosition -= diceValue;
 				break;
 			case Snake:
 				if (newPosition < diceValue)
