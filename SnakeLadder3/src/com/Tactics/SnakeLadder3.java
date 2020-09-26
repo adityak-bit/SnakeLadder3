@@ -11,7 +11,7 @@ public class SnakeLadder3 {
 	public static void main(String[] args) {
 		int newPosition = startPosition;
 		Random r = new Random();
-		while (newPosition != 100) {
+		while (newPosition <100) {
 			int diceValue = 1 + r.nextInt(6);
 			int option = r.nextInt(3);
 			switch (option) {
