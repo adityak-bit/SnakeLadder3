@@ -3,25 +3,25 @@ package com.Tactics;
 import java.util.Random;
 
 public class SnakeLadder3 {
-	public static final int Ladder = 1;
-	public static final int Snake = 2;
-	public static final int NoPlay = 0;
+	public static final int ladder = 1;
+	public static final int snake = 2;
+	public static final int noPlay = 0;
 	public static final int startPosition = 0;
 	public static final int winPosition = 100;
 
 	public static void main(String[] args) {
 		int newPosition = startPosition;
-		Random r = new Random();
+		Random random = new Random();
 		while (newPosition != 100) {
-			int diceValue = 1 + r.nextInt(6);
-			int option = r.nextInt(3);
+			int diceValue = 1 + random.nextInt(6);
+			int option = random.nextInt(3);
 			switch (option) {
-			case Ladder:
+			case ladder:
 				newPosition += diceValue;
 				if (newPosition > winPosition)
 					newPosition -= diceValue;
 				break;
-			case Snake:
+			case snake:
 				if (newPosition < diceValue)
 					newPosition = 0;
 				else
