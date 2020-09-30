@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class SnakeLadder3 {
 	public static void main(String[] args) {
-		int NoPlay = 0;
-		int Snake = 1;
-		int Ladder = 2;
-		Random r = new Random();
-		int option = r.nextInt(3);
+		int noPlay = 0;
+		int snake = 1;
+		int ladder = 2;
+		Random random = new Random();
+		int option = random.nextInt(3);
 		if (option == 0)
 			System.out.println("NoPlay");
 		else if (option == 1)
