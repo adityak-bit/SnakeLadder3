@@ -3,9 +3,9 @@ package com.Tactics;
 import java.util.Random;
 
 public class SnakeLadder3 {
-	public static final int Ladder = 3;
-	public static final int Snake = 2;
-	public static final int NoPlay = 1;
+	public static final int ladder = 3;
+	public static final int snake = 2;
+	public static final int noPlay = 1;
 	public static final int startPosition = 0;
 	public static final int winPosition = 100;
 
@@ -16,14 +16,14 @@ public class SnakeLadder3 {
 		int pos1 = startPosition;
 		int pos2 = startPosition;
 		int count = 0;
-		Random r = new Random();
+		Random random = new Random();
 
 		for (int i = 1;; i++) {
 			int turn = i % 2;
 			if (turn == 1) {
-				int dice = r.nextInt(6) + 1;
+				int dice = random.nextInt(6) + 1;
 
-				int option = r.nextInt(3) + 1;
+				int option = random.nextInt(3) + 1;
 				switch (option) {
 				case 1:
 					break;
@@ -46,9 +46,9 @@ public class SnakeLadder3 {
 				if (pos1 == 100)
 					break;
 			} else {
-				int dice = r.nextInt(6) + 1;
+				int dice = random.nextInt(6) + 1;
 
-				int option = r.nextInt(3) + 1;
+				int option = random.nextInt(3) + 1;
 				switch (option) {
 				case 1:
 					break;
